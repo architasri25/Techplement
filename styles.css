@@ -1,0 +1,213 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height of viewport */
+  background-image: url('background.png'); /* Replace with your image path */
+  background-size: cover; /* Adjusts the background image size */
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+  background-position: center center; /* Centers the background image */
+
+        
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 3px solid #2980b9; /* Add a bottom border for visual separation */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.app-name {
+  font-size: 1.4rem; /* Larger font size for app name */
+  font-weight: bold;
+  color: #fff; /* Text color */
+  margin-left: 10px; /* Spacing between logo and app name */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end; /* Align links to the right on larger screens */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Adjust spacing between links */
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px; /* Larger padding for links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-links li a:hover {
+  background-color: #2980b9; /* Darker background on hover */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px; /* Increased padding for better touch interaction */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.search-form input {
+  border: none;
+  padding: 12px; /* Increased padding for input */
+  font-size: 1rem;
+  border-radius: 5px 0 0 5px;
+  width: 220px; /* Adjust width for search input */
+  outline: none; /* Remove outline on focus */
+}
+
+.search-form button {
+  background-color: #2980b9;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 20px; /* Larger padding for button */
+  border-radius: 0 5px 5px 0;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.search-form button:hover {
+  background-color: #1a639d; /* Darker background on hover */
+}
+
+main {
+  flex: 1; /* Take remaining vertical space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners for weather container */
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.city {
+  font-size: 2.5rem; /* Larger font size for city name */
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 4rem; /* Larger font size for temperature */
+  font-weight: bold;
+  color: #3498db;
+}
+
+.weather-description {
+  font-size: 1.6rem; /* Slightly larger font size for description */
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto; /* Push to the bottom */
+  border-top: 3px solid #2980b9; /* Add a top border for visual separation */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the column */
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align links on smaller screens */
+    margin-top: 10px; /* Add spacing from logo/app name */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Adjust vertical spacing between links */
+  }
+
+  .search-form {
+    position: static; /* Reset position to static */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+    width: 100%; /* Full width for search bar */
+    margin-top: 10px; /* Add spacing from nav links */
+    padding: 15px; /* Increased padding for better touch interaction */
+  }
+
+  .search-form input {
+    width: 100%; /* Full width input on smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .search-form button {
+    border-radius: 5px;
+    width: 100%; /* Full width button on smaller screens */
+  }
+
+  .weather {
+    max-width: 250px;
+  }
+
+  .city {
+    font-size: 2rem; /* Adjust font size for city name on smaller screens */
+  }
+
+  .temperature {
+    font-size: 3rem; /* Adjust font size for temperature on smaller screens */
+  }
+
+  .weather-description {
+    font-size: 1.4rem; /* Adjust font size for description on smaller screens */
+  }
+
+  footer {
+    padding: 10px 0; /* Adjust footer padding on smaller screens */
+  }
+}
